@@ -12,7 +12,7 @@ export const portfolio = {
   resumeUrl: "erfan-sedighehsani-resume.pdf",
   focus: ["47% lower AWS spend", "99.9% platform uptime", "10,000+ monitored targets", "40% faster delivery"],
   skills: [
-    { category: "AWS Cloud", items: ["EKS", "ECS", "EC2", "VPC", "RDS", "S3", "IAM", "Lambda", "CloudFront", "CloudWatch", "WAF", "Secrets Manager", "SageMaker", "Route 53", "Auto Scaling Groups", "Elastic Load Balancing"] },
+    { category: "AWS Cloud", items: ["EKS", "ECS", "EC2", "VPC", "RDS", "S3", "IAM", "Lambda", "CloudFront", "CloudWatch", "WAF", "Secrets Manager", "SageMaker", "Route 53", "Auto Scaling Groups", "Elastic Load Balancing", "Application Load Balancer", "NAT Gateway", "Internet Gateway", "Public & Private Subnets", "Route Tables", "Security Groups"] },
     { category: "Kubernetes & Containers", items: ["Kubernetes", "RKE2", "Kubespray", "Docker", "Helm", "Rook-Ceph"] },
     { category: "Infrastructure as Code", items: ["Terraform", "Ansible", "Packer", "SaltStack"] },
     { category: "Systems & Scripting", items: ["Linux", "Windows Server", "Bash", "Python", "PowerShell"] },
