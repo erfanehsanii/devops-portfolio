@@ -1,6 +1,6 @@
 export const portfolio = {
   name: "Erfan Ehsani",
-  role: "Senior DevOps / SRE & Cloud Security Engineer",
+  role: "Senior DevOps / Site Reliability Engineer",
   tagline: "I build reliable platforms that let engineering teams ship with confidence.",
   summary:
     "Senior DevOps / SRE engineer with 11+ years across IT and infrastructure, including 5+ years focused on production Kubernetes, cloud, CI/CD, and observability. I turn complex systems into secure, reliable platforms that help teams deliver faster.",
@@ -12,12 +12,13 @@ export const portfolio = {
   resumeUrl: "erfan-sedighehsani-resume.pdf",
   focus: ["47% lower AWS spend", "99.9% platform uptime", "10,000+ monitored targets", "40% faster delivery"],
   skills: [
-    { category: "AWS Cloud", items: ["EKS", "ECS", "EC2", "VPC", "RDS", "S3", "IAM", "Lambda", "CloudFront", "CloudWatch", "WAF", "Secrets Manager", "SageMaker"] },
+    { category: "AWS Cloud", items: ["EKS", "ECS", "EC2", "VPC", "RDS", "S3", "IAM", "Lambda", "CloudFront", "CloudWatch", "WAF", "Secrets Manager", "SageMaker", "Route 53", "Auto Scaling Groups", "Elastic Load Balancing"] },
     { category: "Kubernetes & Containers", items: ["Kubernetes", "RKE2", "Kubespray", "Docker", "Helm", "Rook-Ceph"] },
     { category: "Infrastructure as Code", items: ["Terraform", "Ansible", "Packer", "SaltStack"] },
     { category: "Systems & Scripting", items: ["Linux", "Windows Server", "Bash", "Python", "PowerShell"] },
     { category: "Log Collection & Pipelines", items: ["Filebeat", "Elastic Agent", "Fluent Bit", "Custom ingest pipelines"] },
     { category: "CI/CD & GitOps", items: ["GitHub Actions", "GitLab CI", "Jenkins", "FluxCD", "Git", "SonarQube"] },
+    { category: "Collaboration & Delivery", items: ["Jira", "Google Workspace", "Agile delivery", "Scrum", "Cross-functional collaboration"] },
     { category: "Observability", items: ["Prometheus", "Grafana", "Alertmanager", "Zabbix", "ELK / ECK", "CloudWatch"] },
     { category: "Networking & Security", items: ["HAProxy", "NGINX", "Keepalived", "Cilium", "AWS WAF", "DNS"] },
     { category: "Data, Cache & Messaging", items: ["Redis", "RabbitMQ", "Kafka", "PostgreSQL", "Oracle", "ClickHouse"] },
