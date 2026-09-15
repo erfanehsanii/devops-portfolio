@@ -12,12 +12,13 @@ export const portfolio = {
   resumeUrl: "erfan-sedighehsani-resume.pdf",
   focus: ["47% lower AWS spend", "99.9% platform uptime", "10,000+ monitored targets", "40% faster delivery"],
   skills: [
-    { category: "Cloud & Containers", items: ["AWS", "EKS", "ECS", "RKE2", "Kubespray", "Docker", "Helm", "Rook-Ceph"] },
+    { category: "AWS Cloud", items: ["EKS", "ECS", "EC2", "VPC", "RDS", "S3", "IAM", "Lambda", "CloudFront", "CloudWatch", "WAF", "Secrets Manager"] },
+    { category: "Kubernetes & Containers", items: ["Kubernetes", "RKE2", "Kubespray", "Docker", "Helm", "Rook-Ceph"] },
     { category: "Infrastructure as Code", items: ["Terraform", "Ansible", "Packer", "SaltStack", "Linux", "Bash", "Python"] },
     { category: "CI/CD & GitOps", items: ["GitHub Actions", "GitLab CI", "Jenkins", "FluxCD", "Git", "SonarQube"] },
     { category: "Observability", items: ["Prometheus", "Grafana", "Alertmanager", "Zabbix", "ELK / ECK", "CloudWatch"] },
     { category: "Networking & Security", items: ["HAProxy", "NGINX", "Keepalived", "Cilium", "AWS WAF", "DNS"] },
-    { category: "Data & Messaging", items: ["Redis", "RabbitMQ", "PostgreSQL", "Oracle", "ClickHouse", "AWS RDS"] },
+    { category: "Data, Cache & Messaging", items: ["Redis", "RabbitMQ", "Kafka", "PostgreSQL", "Oracle", "ClickHouse"] },
   ],
   experience: [
     {
