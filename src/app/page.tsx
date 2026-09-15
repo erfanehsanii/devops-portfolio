@@ -20,7 +20,7 @@ function SectionHeading({ eyebrow, title, intro }: { eyebrow: string; title: str
 }
 
 export default function Home() {
-  const { name, role, tagline, summary, github, linkedin, email, resumeUrl, skills, experience, projects, certifications } = portfolio;
+  const { name, role, tagline, summary, github, linkedin, email, phone, resumeUrl, skills, experience, projects, certifications } = portfolio;
 
   return (
     <main className="overflow-hidden">
@@ -149,7 +149,7 @@ export default function Home() {
 
       <section id="contact" className="section-anchor border-t border-slate-800 bg-panel">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
-          <p className="font-mono text-xs font-bold uppercase tracking-[0.24em] text-cyan">07 / Contact</p>
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.24em] text-cyan">08 / Contact</p>
           <div className="mt-5 flex flex-col justify-between gap-9 md:flex-row md:items-end">
             <div>
               <h2 className="max-w-xl text-4xl font-bold tracking-tight text-white sm:text-5xl">Let&apos;s build something reliable.</h2>
@@ -157,8 +157,9 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-3">
               {email && <a href={`mailto:${email}`} className="rounded-full bg-cyan px-5 py-3 text-sm font-bold text-ink">Email me</a>}
+              {phone && <a href={`tel:${phone}`} className="rounded-full border border-slate-600 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan hover:text-cyan">Call me</a>}
               <a href={github} target="_blank" rel="noreferrer" className="rounded-full border border-slate-600 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan hover:text-cyan">GitHub ↗</a>
-              {linkedin ? <a href={linkedin} target="_blank" rel="noreferrer" className="rounded-full border border-slate-600 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan hover:text-cyan">LinkedIn ↗</a> : <span className="rounded-full border border-dashed border-slate-700 px-5 py-3 text-sm font-semibold text-slate-400">LinkedIn link pending</span>}
+              <a href={linkedin} target="_blank" rel="noreferrer" className="rounded-full border border-slate-600 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan hover:text-cyan">LinkedIn ↗</a>
             </div>
           </div>
         </div>
