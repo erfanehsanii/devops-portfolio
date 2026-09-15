@@ -9,7 +9,7 @@ export const portfolio = {
   linkedin: "https://www.linkedin.com/in/erfan-ehsani/",
   email: "erfanehsani1992@gmail.com",
   phone: "+989125458845",
-  resumeUrl: "/erfan-sedighehsani-resume.pdf",
+  resumeUrl: "erfan-sedighehsani-resume.pdf",
   focus: ["Kubernetes platforms", "Cloud security", "Observability", "Platform reliability"],
   skills: [
     { category: "Cloud & Containers", items: ["AWS", "EKS", "ECS", "RKE2", "Kubespray", "Docker", "Helm", "Rook-Ceph"] },
