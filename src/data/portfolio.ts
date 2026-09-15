@@ -1,16 +1,16 @@
 export const portfolio = {
   name: "Erfan Ehsani",
-  role: "Senior DevOps / Site Reliability Engineer",
+  role: "Senior DevOps / SRE & Cloud Security Engineer",
   tagline: "I build reliable platforms that let engineering teams ship with confidence.",
   summary:
-    "Senior DevOps and Site Reliability Engineer with 5+ years of hands-on experience building Kubernetes platforms, cloud infrastructure, CI/CD pipelines, and observability systems. I combine AWS, Terraform, automation, and incident-focused operations to make complex platforms dependable and measurable.",
+    "Senior DevOps / SRE engineer with 11+ years across IT and infrastructure, including 5+ years focused on production Kubernetes, cloud, CI/CD, and observability. I turn complex systems into secure, reliable platforms that help teams deliver faster.",
   location: "Tehran, Iran · Open to remote and relocation opportunities",
   github: "https://github.com/erfanehsanii",
   linkedin: "https://www.linkedin.com/in/erfan-ehsani/",
   email: "erfanehsani1992@gmail.com",
   phone: "+989125458845",
   resumeUrl: "erfan-sedighehsani-resume.pdf",
-  focus: ["Kubernetes platforms", "Cloud security", "Observability", "Platform reliability"],
+  focus: ["47% lower AWS spend", "99.9% platform uptime", "10,000+ monitored targets", "40% faster delivery"],
   skills: [
     { category: "Cloud & Containers", items: ["AWS", "EKS", "ECS", "RKE2", "Kubespray", "Docker", "Helm", "Rook-Ceph"] },
     { category: "Infrastructure as Code", items: ["Terraform", "Ansible", "Packer", "SaltStack", "Linux", "Bash", "Python"] },
@@ -109,5 +109,5 @@ export const portfolio = {
       outcome: "A repeatable, automated route from source code to production deployment.",
     },
   ],
-  certifications: ["Certification details available on request."],
+  certifications: ["Professional training: ISO 27001 and BAIT security fundamentals."],
 };
