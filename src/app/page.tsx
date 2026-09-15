@@ -5,6 +5,7 @@ const navItems = [
   ["Skills", "skills"],
   ["Experience", "experience"],
   ["Projects", "projects"],
+  ["Learn", "learning"],
   ["Resume", "resume"],
   ["Contact", "contact"],
 ] as const;
@@ -20,7 +21,7 @@ function SectionHeading({ eyebrow, title, intro }: { eyebrow: string; title: str
 }
 
 export default function Home() {
-  const { name, role, tagline, summary, github, linkedin, email, phone, resumeUrl, skills, experience, projects, certifications } = portfolio;
+  const { name, role, tagline, summary, github, linkedin, email, phone, resumeUrl, skills, experience, projects, additionalProjects, learning, certifications } = portfolio;
 
   return (
     <main className="overflow-hidden">
@@ -110,7 +111,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
           <SectionHeading eyebrow="05 / Selected work" title="Platforms designed for real operational demands." intro="A selection of hands-on infrastructure work across Kubernetes, observability, data platforms, and automation." />
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, index) => (
+            {[...projects, ...additionalProjects].map((project, index) => (
               <article key={project.title} className="group flex min-h-72 flex-col rounded-2xl border border-slate-800 bg-ink p-6 transition hover:border-cyan/60 hover:shadow-glow">
                 <p className="font-mono text-sm text-cyan">0{index + 1}</p>
                 <p className="mt-6 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">{project.tag}</p>
@@ -127,6 +128,13 @@ export default function Home() {
         <SectionHeading eyebrow="06 / Certifications" title="Credentials and continuous learning." />
         <div className="rounded-2xl border border-dashed border-slate-700 px-6 py-8 text-slate-300">
           {certifications.map((certification) => <p key={certification}>{certification}</p>)}
+        </div>
+      </section>
+
+      <section id="learning" className="section-anchor border-t border-slate-800 bg-[#0b1627]">
+        <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
+          <SectionHeading eyebrow="07 / Learn" title="Practical notes for engineers building reliable systems." intro="A growing collection of field notes, architecture explainers, and safe DevOps patterns." />
+          <div className="grid gap-4 md:grid-cols-3">{learning.map((topic) => <article key={topic} className="rounded-2xl border border-slate-800 bg-ink p-6"><p className="text-xs font-bold uppercase tracking-[0.14em] text-cyan">Coming soon</p><p className="mt-4 font-semibold text-white">{topic}</p></article>)}</div>
         </div>
       </section>
 
