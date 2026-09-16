@@ -1,5 +1,5 @@
 export const portfolio = {
-  name: "Erfan Ehsani",
+  name: "Erfan Sedighehsani",
   role: "Senior DevOps / Site Reliability Engineer",
   tagline: "I build reliable platforms that let engineering teams ship with confidence.",
   summary:
