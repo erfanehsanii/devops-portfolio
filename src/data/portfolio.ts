@@ -37,6 +37,20 @@ export const portfolio = {
       takeaway: "I combine hands-on technical depth with reliability, cost, and delivery outcomes.",
     },
   ],
+  workingStyle: [
+    {
+      title: "Team builder",
+      description: "I create trust, connection, and shared ownership so teams can solve difficult problems together—not in silos.",
+    },
+    {
+      title: "Curious by practice",
+      description: "I keep learning through hands-on work, follow meaningful changes in the field, and share useful patterns with the people around me.",
+    },
+    {
+      title: "Responsible AI-enabled delivery",
+      description: "I use AI to accelerate research, drafting, analysis, and automation, while validating outputs, protecting sensitive data, and retaining full engineering accountability.",
+    },
+  ],
   skills: [
     {
       "category": "AWS Compute, Network & Edge",
