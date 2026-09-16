@@ -128,5 +128,5 @@ export const portfolio = {
       outcome: "Structured, searchable Windows observability without exposing internal systems or identifiers.",
     },
   ],
-  certifications: ["Professional training: ISO 27001 and BAIT security fundamentals."],
+  certifications: ["AWS Certified Solutions Architect - Associate | Amazon Web Services", "Professional training: DevOps Administration | Sematec", "Training: CKA Exam Preparation Course | KodeKloud", "Course certificates: Jenkins and GitOps with Argo CD | KodeKloud", "Professional training: ISO 27001 and BAIT security fundamentals."],
 };
