@@ -23,7 +23,7 @@ function SectionHeading({ eyebrow, title, intro }: { eyebrow: string; title: str
 }
 
 export default function Home() {
-  const { name, tagline, summary, github, linkedin, email, phone, resumeUrl, story, skills, experience, projects, additionalProjects, learning, certifications } = portfolio;
+  const { name, tagline, summary, github, linkedin, email, phone, resumeUrl, story, workingStyle, skills, experience, projects, additionalProjects, learning, certifications } = portfolio;
 
   return (
     <main className="overflow-hidden">
@@ -69,13 +69,20 @@ export default function Home() {
         <SectionHeading eyebrow="02 / About me" title="Infrastructure should make teams faster, not busier." />
         <div className="grid gap-10 lg:grid-cols-[1.45fr_0.8fr] lg:items-start">
           <p className="text-xl leading-9 text-slate-300">{summary}</p>
-          <div className="rounded-2xl border border-slate-800 bg-panel/60 p-6">
+          <aside className="rounded-2xl border border-slate-800 bg-panel/60 p-6">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-slate-500">Based in</p>
             <p className="mt-2 text-lg font-semibold text-white">{portfolio.location}</p>
             <div className="my-5 h-px bg-slate-800" />
-            <p className="font-mono text-xs uppercase tracking-[0.18em] text-slate-500">Approach</p>
-            <p className="mt-2 leading-7 text-slate-300">Build secure systems, automate repeatable work, and make the whole platform observable.</p>
-          </div>
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-slate-500">How I work</p>
+            <div className="mt-4 space-y-5">
+              {workingStyle.map((item) => (
+                <div key={item.title}>
+                  <p className="font-semibold text-white">{item.title}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-300">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </aside>
         </div>
       </section>
 
