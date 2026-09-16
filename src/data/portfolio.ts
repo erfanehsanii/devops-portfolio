@@ -1,7 +1,7 @@
 export const portfolio = {
   name: "Erfan Sedighehsani",
   role: "Senior DevOps / Site Reliability Engineer",
-  tagline: "I build reliable platforms that let engineering teams ship with confidence.",
+  tagline: "I design and operate Kubernetes, cloud, delivery, and observability platforms that keep teams moving with confidence.",
   summary:
     "Senior DevOps / SRE engineer with 11+ years across IT and infrastructure, including 5+ years focused on production Kubernetes, cloud, CI/CD, and observability. I turn complex systems into secure, reliable platforms that help teams deliver faster.",
   location: "Tehran, Iran · Open to remote and relocation opportunities",
@@ -10,7 +10,33 @@ export const portfolio = {
   email: "erfanehsani1992@gmail.com",
   phone: "+989125458845",
   resumeUrl: "erfan-sedighehsani-resume.pdf",
-  focus: ["47% lower AWS spend", "99.9% platform uptime", "10,000+ monitored targets", "40% faster delivery"],
+  focus: ["€8K monthly AWS savings", "99.9% availability", "10K+ monitored targets", "40% faster delivery"],
+  story: [
+    {
+      phase: "FOUNDATION",
+      title: "Software, data, and infrastructure",
+      description: "Early work in Delphi development, Oracle database administration, network support, and operations built a practical understanding of how applications, data, networks, and people meet in production.",
+      takeaway: "I still design platforms with the whole system in mind—not just the deployment layer.",
+    },
+    {
+      phase: "RELIABILITY",
+      title: "Monitoring, incident response, and automation",
+      description: "Moving into production monitoring strengthened my focus on service health, useful alerts, faster troubleshooting, and repeatable operational practices.",
+      takeaway: "I build observability around how systems actually fail and how teams need to respond.",
+    },
+    {
+      phase: "PLATFORM ENGINEERING",
+      title: "Cloud, Kubernetes, and delivery systems",
+      description: "DevOps work brought Terraform, AWS, Kubernetes, CI/CD, GitOps, and automation together into platforms that make delivery safer and faster.",
+      takeaway: "The goal is a clear, reliable path from code to production.",
+    },
+    {
+      phase: "TODAY",
+      title: "Senior DevOps and SRE ownership",
+      description: "I now operate resilient production platforms across multi-datacenter Kubernetes, AWS, observability, security controls, and high-stakes workloads.",
+      takeaway: "I combine hands-on technical depth with reliability, cost, and delivery outcomes.",
+    },
+  ],
   skills: [
     { category: "AWS Cloud", items: ["EKS", "ECS", "EC2", "VPC", "RDS", "S3", "IAM", "Lambda", "CloudFront", "CloudWatch", "WAF", "Secrets Manager", "SageMaker", "Route 53", "Auto Scaling Groups", "Elastic Load Balancing", "Application Load Balancer", "NAT Gateway", "Internet Gateway", "Public & Private Subnets", "Route Tables", "Security Groups"] },
     { category: "Kubernetes & Containers", items: ["Kubernetes", "RKE2", "Kubespray", "Docker", "Helm", "Rook-Ceph"] },
