@@ -99,16 +99,35 @@ export default function Home() {
 
       <section id="skills" className="section-anchor border-y border-slate-800 bg-[#0b1627]">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
-          <SectionHeading eyebrow="04 / Toolkit" title="Technology with purpose." intro="Tools are chosen for resilience, clarity, and the needs of the team using them." />
+          <SectionHeading eyebrow="04 / Toolkit" title="Deep platform experience, organized for clarity." intro="Core capabilities are visible at a glance. Expand any domain for the full service inventory." />
           <div className="grid gap-4 md:grid-cols-2">
-            {skills.map((group) => (
-              <article key={group.category} className="rounded-2xl border border-slate-800 bg-ink p-6 transition hover:-translate-y-1 hover:border-cyan/50">
-                <h3 className="text-lg font-bold text-white">{group.category}</h3>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {group.items.map((item) => <span key={item} className="rounded-full border border-slate-700 px-3 py-1.5 text-sm text-slate-300">{item}</span>)}
-                </div>
-              </article>
-            ))}
+            {skills.map((group) => {
+              const additionalItems = group.items.filter((item) => !group.featured.includes(item));
+
+              return (
+                <article key={group.category} className="rounded-2xl border border-slate-800 bg-ink p-6 transition hover:-translate-y-1 hover:border-cyan/50">
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="text-lg font-bold text-white">{group.category}</h3>
+                    <span className="shrink-0 font-mono text-xs text-slate-500">{group.items.length} tools</span>
+                  </div>
+                  <p className="mt-2 text-sm text-slate-400">Core hands-on coverage</p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {group.featured.map((item) => <span key={item} className="rounded-full border border-cyan/25 bg-cyan/5 px-3 py-1.5 text-sm text-slate-200">{item}</span>)}
+                  </div>
+                  {additionalItems.length > 0 && (
+                    <details className="group mt-6 border-t border-slate-800 pt-4">
+                      <summary className="cursor-pointer list-none text-sm font-semibold text-cyan [&::-webkit-details-marker]:hidden">
+                        <span className="group-open:hidden">View remaining {additionalItems.length} tools +</span>
+                        <span className="hidden group-open:inline">Hide detailed inventory −</span>
+                      </summary>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {additionalItems.map((item) => <span key={item} className="rounded-full border border-slate-700 px-3 py-1.5 text-sm text-slate-400">{item}</span>)}
+                      </div>
+                    </details>
+                  )}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
