@@ -5,6 +5,7 @@ const navItems = [
   ["Skills", "skills"],
   ["Experience", "experience"],
   ["Projects", "projects"],
+  ["Certifications", "certifications"],
   ["Learn", "learning"],
   ["Resume", "resume"],
   ["Contact", "contact"],
@@ -125,9 +126,25 @@ export default function Home() {
       </section>
 
       <section id="certifications" className="section-anchor mx-auto max-w-6xl px-6 py-24 lg:px-8">
-        <SectionHeading eyebrow="06 / Certifications" title="Credentials and continuous learning." />
-        <div className="rounded-2xl border border-dashed border-slate-700 px-6 py-8 text-slate-300">
-          {certifications.map((certification) => <p key={certification}>{certification}</p>)}
+        <SectionHeading eyebrow="06 / Credentials" title="Credentials and continuous learning." intro="A verified cloud certification, supported by hands-on professional training in delivery, Kubernetes, and security fundamentals." />
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {certifications.map((certification, index) => {
+            const [credential, issuer] = certification.split("|").map((part) => part.trim());
+            const type = index === 0 ? "Industry certification" : certification.startsWith("Course certificates") ? "Course certificates" : "Professional training";
+
+            return (
+              <article key={certification} className={`flex min-h-52 flex-col rounded-2xl border bg-panel/60 p-6 transition hover:-translate-y-1 hover:border-cyan/60 ${
+                index === 0 ? "border-cyan/50 shadow-glow" : "border-slate-800"
+              }`}>
+                <div className="flex items-start justify-between gap-4">
+                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-cyan">{type}</p>
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-700 font-mono text-xs text-slate-400">0{index + 1}</span>
+                </div>
+                <h3 className="mt-7 text-xl font-bold leading-7 text-white">{credential}</h3>
+                <p className="mt-auto border-t border-slate-800 pt-4 text-sm text-slate-400">{issuer ?? "Professional development"}</p>
+              </article>
+            );
+          })}
         </div>
       </section>
 
@@ -140,7 +157,7 @@ export default function Home() {
 
       <section id="resume" className="section-anchor border-t border-slate-800 bg-[#0b1627]">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
-          <SectionHeading eyebrow="07 / Resume" title="A focused record of platform engineering experience." intro="The portfolio summarizes the work. Add a current PDF resume for recruiters who need a concise, downloadable version." />
+          <SectionHeading eyebrow="08 / Resume" title="A focused record of platform engineering experience." intro="The portfolio summarizes the work. Add a current PDF resume for recruiters who need a concise, downloadable version." />
           <div className="flex flex-col gap-5 rounded-2xl border border-slate-800 bg-ink p-7 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="font-semibold text-white">Resume PDF</p>
@@ -157,7 +174,7 @@ export default function Home() {
 
       <section id="contact" className="section-anchor border-t border-slate-800 bg-panel">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
-          <p className="font-mono text-xs font-bold uppercase tracking-[0.24em] text-cyan">08 / Contact</p>
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.24em] text-cyan">09 / Contact</p>
           <div className="mt-5 flex flex-col justify-between gap-9 md:flex-row md:items-end">
             <div>
               <h2 className="max-w-xl text-4xl font-bold tracking-tight text-white sm:text-5xl">Let&apos;s build something reliable.</h2>
