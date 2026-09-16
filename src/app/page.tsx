@@ -129,19 +129,24 @@ export default function Home() {
         <SectionHeading eyebrow="06 / Credentials" title="Credentials and continuous learning." intro="A verified cloud certification, supported by hands-on professional training in delivery, Kubernetes, and security fundamentals." />
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {certifications.map((certification, index) => {
-            const [credential, issuer] = certification.split("|").map((part) => part.trim());
-            const type = index === 0 ? "Industry certification" : certification.startsWith("Course certificates") ? "Course certificates" : "Professional training";
+            const credential = typeof certification === "string"
+              ? { name: certification, issuer: "Professional development", type: "Credential" }
+              : certification;
 
             return (
-              <article key={certification} className={`flex min-h-52 flex-col rounded-2xl border bg-panel/60 p-6 transition hover:-translate-y-1 hover:border-cyan/60 ${
-                index === 0 ? "border-cyan/50 shadow-glow" : "border-slate-800"
+              <article key={credential.name} className={`flex min-h-60 flex-col rounded-2xl border bg-panel/60 p-6 transition hover:-translate-y-1 hover:border-cyan/60 ${
+                credential.type === "Industry certification" ? "border-cyan/50 shadow-glow" : "border-slate-800"
               }`}>
                 <div className="flex items-start justify-between gap-4">
-                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-cyan">{type}</p>
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-700 font-mono text-xs text-slate-400">0{index + 1}</span>
+                  <p className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-cyan">{credential.type}</p>
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-700 font-mono text-xs text-slate-400">{String(index + 1).padStart(2, "0")}</span>
                 </div>
-                <h3 className="mt-7 text-xl font-bold leading-7 text-white">{credential}</h3>
-                <p className="mt-auto border-t border-slate-800 pt-4 text-sm text-slate-400">{issuer ?? "Professional development"}</p>
+                <h3 className="mt-7 text-xl font-bold leading-7 text-white">{credential.name}</h3>
+                <div className="mt-auto border-t border-slate-800 pt-4 text-sm leading-6 text-slate-400">
+                  <p>{credential.issuer}</p>
+                  {credential.issued && <p>{credential.issued}</p>}
+                  {credential.credentialId && <p className="font-mono text-xs text-slate-500">ID: {credential.credentialId}</p>}
+                </div>
               </article>
             );
           })}
